@@ -1,0 +1,32 @@
+{
+    "global": {
+        "osd_pool_default_pg_autoscale_mode": "off"
+    }, 
+    "client": {
+        "rbd_default_features": "3",
+        "debug_rbd": "1/1", 
+        "log_file": "/var/log/ceph/client.ceph.log", 
+        "log_to_stderr": false, 
+        "err_to_stderr": true
+    }, 
+    "mgr": {
+        "mon_max_pg_per_osd": "300",
+        "mon_pg_warn_min_per_osd": "10"
+    }, 
+    "mon": {
+        "mon compact on start": true, 
+        "mon_clock_drift_allowed": "0.3",
+        "mon_allow_pool_delete": true,
+        "mon_osd_min_in_ratio": "0.3",
+        "mon_warn_on_insecure_global_id_reclaim_allowed": false
+    }, 
+    "osd": {
+        "osd_op_queue": "wpq",
+        "osd_crush_update_on_start": true, 
+        "osd_heartbeat_grace": "20",
+        "osd_heartbeat_interval": "5",
+        "osd_max_pg_per_osd_hard_ratio": "2.5",
+        "osd_scrub_auto_repair": false, 
+        "osd_journal_size": "20480"
+    }
+}
